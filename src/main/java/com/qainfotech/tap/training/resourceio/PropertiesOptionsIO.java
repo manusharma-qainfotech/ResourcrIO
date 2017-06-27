@@ -17,8 +17,7 @@ import java.util.StringTokenizer;
 public class PropertiesOptionsIO{
     
     public String getOptionValue(String optionKey) throws IOException {
-   //     throw new UnsupportedOperationException("Not implemented.");
-        //String path = "D:\\assignment-resource-io-master\src\test\resources\options.properties";
+  
          FileReader fr =new FileReader(new File("D:\\\\assignment-resource-io-master\\src\\test\\resources\\options.properties"));
           
           Properties p=new Properties();  
@@ -32,15 +31,13 @@ public class PropertiesOptionsIO{
          }
 
     public void addOption(String optionKey, Object optionValue) throws IOException {
-    //    throw new UnsupportedOperationException("Not implemented.");
-      FileWriter fw = new FileWriter(new File("D:\\\\assignment-resource-io-master\\src\\test\\resources\\options.properties"),true);
+        FileWriter fw = new FileWriter(new File("D:\\\\assignment-resource-io-master\\src\\test\\resources\\options.properties"),true);
     Properties p=new Properties();  
     String s = optionValue.toString();
-   // System.out.println(s);
-    p.setProperty(optionKey,s);    
+      p.setProperty(optionKey,s);    
     p.store(fw,null);
     fw.close();
-    //p.store(new FileWriter("info.properties"),"Javatpoint Properties Example");  
+    
     
     }
 }
