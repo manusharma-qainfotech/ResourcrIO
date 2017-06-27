@@ -43,12 +43,12 @@ public class TeamsJsonReader {
 			JSONObject jo = (JSONObject) ob;
 			listind = new ArrayList<Individual>();
 			JSONArray ja = (JSONArray) jo.get("individuals");
-			JSONObject job[] = new JSONObject[ja.size()];
+			JSONObject job
 			for (int i = 0; i < ja.size(); i++) {
 				job[i] = (JSONObject) ja.get(i);
-				Integer id = ((Long) job[i].get("id")).intValue();
-				String name = job[i].get("name").toString();
-				Boolean active = (Boolean) job[i].get("active");
+				Integer id = ((Long) job.get("id")).intValue();
+				String name = job.get("name").toString();
+				Boolean active = (Boolean) job.get("active");
 				Map<String, Object> map = new HashMap();
 				map.put("id", id);
 				map.put("name", name);
