@@ -13,21 +13,10 @@ public class Individual {
 	private final Boolean active;
 
 	public Individual(Map<String, Object> individualMap) {
-		String name1= null;
-		Integer id1= null;
-		Boolean active1= null;
-		for (Map.Entry<String, Object> entry : individualMap.entrySet()) {
-			if (entry.getKey() == "name")
-				name1 = entry.getValue().toString();
-			if (entry.getKey() == "id")
-				id1 = (Integer) entry.getValue();
-			if (entry.getKey() == "active")
-				active1 = (Boolean) entry.getValue();
+		name = individualMap.get("name").toString();
+		id = (Integer) individualMap.get("id");
+		active = (Boolean) individualMap.get("active");
 
-		}
-		name = name1;
-		id = id1;
-		active = active1;
 
 	}
 
